@@ -30,11 +30,11 @@
 #  One good pattern is to write this out to the /srv/ tree, for example,
 #  /srv/pault.ag/congress/ or /srv/io.unitedstates/congress/
 
-FROM        debian:jessie
+FROM        python:2.7
 MAINTAINER  Paul R. Tagliamonte <paultag@sunlightfoundation.com>
 
 RUN apt-get update && apt-get install -y \
-    git python-dev libxml2-dev libxslt1-dev libz-dev python-pip wget
+    git python-dev libxml2-dev libxslt1-dev libz-dev wget
 
 RUN mkdir -p /opt/theunitedstates.io/
 ADD . /opt/theunitedstates.io/congress/
